@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { TemplateformsComponent } from './templateforms/templateforms.component';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
+import { FormBuilder } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module'
+
 const firebaseConfig = {
   apiKey: "AIzaSyCsf73klr67ApRMfDUYGK9FETF2oalQK8Q",
   authDomain: "reactive-forms-8b262.firebaseapp.com",
@@ -23,9 +28,11 @@ const firebaseConfig = {
     TemplateformsComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     FormsModule,
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

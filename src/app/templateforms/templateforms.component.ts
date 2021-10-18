@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templateforms.component.css']
 })
 export class TemplateformsComponent implements OnInit {
-
+  onSubmit(f) {
+    console.log(f.value);
+  }
   constructor() { }
 
   ngOnInit(): void {

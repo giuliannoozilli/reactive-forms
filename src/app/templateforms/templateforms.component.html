@@ -1,1 +1,15 @@
 <p>templateforms works!</p>
+<div style="margin:1rem;">
+  <form novalidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" ngModel>
+      <label for="floatingInput">Email address</label>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" ngModel>
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
