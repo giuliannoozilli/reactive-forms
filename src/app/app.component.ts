@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reactive-forms';
+  onSubmit(f) {
+    console.log(f.value);
+}
 }
