@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+// angmaterial modules
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
 
 import { RouterModule } from '@angular/router';
 
@@ -9,7 +15,8 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
 import { TemplateformsComponent } from './templateforms/templateforms.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FormBuilder } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCsf73klr67ApRMfDUYGK9FETF2oalQK8Q",
@@ -28,11 +35,17 @@ const firebaseConfig = {
     TemplateformsComponent
   ],
   imports: [
+    FormBuilder,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
     RouterModule,
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

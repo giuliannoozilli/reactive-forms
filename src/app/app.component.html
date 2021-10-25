@@ -1,3 +1,30 @@
+<mat-card class="contact-card">
+  <mat-card-title>Template Form</mat-card-title>
+  <mat-card-content>
+    <form novalidate >
+    <mat-form-field>
+      <input matInput placeholder="firstname"  class="form-control"  name="firstname" ngModel>
+
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="lastname" class="form-control"  name="lastname" ngModel>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="email" class="form-control"  name="email" ngModel>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea rows="4" cols="50" matInput placeholder="message" class="form-control"  name="message" ngModel></textarea>
+    </mat-form-field>
+    <br>
+    <button id="submit" mat-raised-button type="submit" color="primary">Submit</button>
+
+    </form>
+  </mat-card-content>
+</mat-card>
+<!--
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -17,4 +44,4 @@
   </div>
 </nav>
 <router-outlet></router-outlet>
-
+-->
